@@ -66,4 +66,35 @@ div.boxes div.box div.content-box p {
   line-height: 20px;
   font-size: 15px;
   color: rgb(128, 128, 128);
+}
+
+@media (max-width: 768px) {
+  body {
+    background-image: none;
+  }
+
+  div.container {
+    padding: 0;
+  }
+
+  div.boxes {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+  }
+  div.boxes div.box {
+    padding: 50px 5px;
+  }
+  div.boxes div.box div.image-box img {
+    width: 200px;
+  }
+  div.boxes div.box div.title-box h2 {
+    font-size: 18px;
+    line-height: 20px;
+    margin: 8px 0;
+  }
+  div.boxes div.box div.content-box p {
+    line-height: 16px;
+    margin: 8px 0;
+  }
 }/*# sourceMappingURL=style.css.map */
