@@ -15,7 +15,6 @@ body{
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    background-clip: border-box;
 }
 
 .container{
@@ -34,8 +33,11 @@ div.boxes{
     display: flex;
     justify-content: center;
     align-items: center;
+    
     width: 90%;
-    height: 70%;
+    margin: 0 auto;
+    
+    height: 75%;
     border-radius: 10px;
     box-shadow: 2px 5px 16px 1px rgba(0,0,0,0.65);
     div.box{
@@ -83,13 +85,15 @@ div.boxes{
     }
 
     div.container{
+        max-width: 100%;
+        height: 100%;
         padding: 0;
     }
 
     div.boxes{
         width: 100%;
         height: 100%;
-        margin: 0;
+        padding: 0;
         div.box{
             padding: 50px 5px;
             div.image-box{
@@ -108,6 +112,42 @@ div.boxes{
             div.content-box{
                 p{
                     line-height: 16px;
+                    margin: 8px 0;
+                }
+            }
+        }
+    }
+
+}
+
+@include lg{
+    
+
+    div.container{
+        padding: 0;
+    }
+
+    div.boxes{
+        width: 60%;
+        margin: 0;
+        div.box{
+            padding: 50px 5px;
+            div.image-box{
+                img{
+                    width: 200px;
+                }
+            }
+            div.title-box{
+    
+                h2{
+                    font-size: 20px;
+                    line-height: 22px;
+                    margin: 8px 0;
+                }
+            }
+            div.content-box{
+                p{
+                    line-height: 18px;
                     margin: 8px 0;
                 }
             }
