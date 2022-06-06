@@ -4,124 +4,75 @@
   padding: 0;
 }
 
-html {
-  font-size: 16px;
-}
-
 body {
-  background-image: url("./../images/body-bg.jpg");
-  height: 100vh;
-  width: 100%;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
+  font-family: "Outfit", sans-serif;
 }
 
 .container {
-  width: 100%;
-  max-width: 1440px;
-  margin: 0 auto;
-  padding: 0 20px;
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
 }
 
-div.boxes {
-  background-color: rgba(101, 153, 232, 0.238);
+.box {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 90%;
-  margin: 0 auto;
-  height: 75%;
-  border-radius: 10px;
-  box-shadow: 2px 5px 16px 1px rgba(0, 0, 0, 0.65);
-}
-div.boxes div.box {
-  display: flex;
-  justify-content: center;
   flex-direction: column;
-  align-items: center;
-  width: 300px;
+  max-width: 300px;
   background-color: white;
-  padding: 12px;
-  border-radius: 10px;
-  box-shadow: 2px 5px 16px 1px rgba(0, 0, 0, 0.365);
+  padding: 1rem;
+  border-radius: 8px;
+  gap: 1rem;
 }
-div.boxes div.box div.image-box img {
-  width: 250px;
-  border-radius: 10px;
+.box img {
+  max-width: 250px;
+  border-radius: 8px;
 }
-div.boxes div.box div.title-box h2 {
+.box h2 {
   text-align: center;
-  margin: 15px 0;
-  line-height: 30px;
-  font-weight: 600;
+  font-size: 1.3rem;
+  font-weight: 700;
+  max-width: 250px;
 }
-div.boxes div.box div.content-box p {
+.box p {
   text-align: center;
-  margin: 15px 0;
-  line-height: 20px;
-  font-size: 15px;
-  color: rgb(128, 128, 128);
+  font-size: 1rem;
+  max-width: 250px;
+  color: rgb(115, 115, 115);
 }
 
-@media (max-width: 768px) {
-  body {
-    background-image: none;
-  }
-
-  div.container {
-    max-width: 100%;
-    height: 100%;
-    padding: 0;
-  }
-
-  div.boxes {
-    width: 100%;
-    height: 100%;
-    padding: 0;
-  }
-  div.boxes div.box {
-    padding: 50px 5px;
-  }
-  div.boxes div.box div.image-box img {
-    width: 200px;
-  }
-  div.boxes div.box div.title-box h2 {
-    font-size: 18px;
-    line-height: 20px;
-    margin: 8px 0;
-  }
-  div.boxes div.box div.content-box p {
-    line-height: 16px;
-    margin: 8px 0;
-  }
+.background {
+  background-image: url("./../images/body-bg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -3;
 }
-@media (max-width: 992px) {
-  div.container {
-    padding: 0;
-  }
 
-  div.boxes {
-    width: 60%;
-    margin: 0;
+@media (min-width: 1440px) {
+  .box {
+    max-width: 500px;
+    padding: 1.3rem;
+    border-radius: 10px;
+    gap: 1.5rem;
   }
-  div.boxes div.box {
-    padding: 50px 5px;
+  .box img {
+    max-width: 300px;
+    border-radius: 10px;
   }
-  div.boxes div.box div.image-box img {
-    width: 200px;
+  .box h2 {
+    font-size: 1.5rem;
+    max-width: 300px;
   }
-  div.boxes div.box div.title-box h2 {
-    font-size: 20px;
-    line-height: 22px;
-    margin: 8px 0;
-  }
-  div.boxes div.box div.content-box p {
-    line-height: 18px;
-    margin: 8px 0;
+  .box p {
+    font-size: 1.2rem;
+    max-width: 290px;
   }
 }/*# sourceMappingURL=style.css.map */

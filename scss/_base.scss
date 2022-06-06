@@ -4,154 +4,80 @@
     padding: 0;
 }
 
-html{
-    font-size: 16px;
-}
-
 body{
-    background-image:url("./../images/body-bg.jpg");
-    height: 100vh;
-    width: 100%;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
+    font-family: 'Outfit', sans-serif;
 }
 
 .container{
-    width: 100%;
-    max-width: 1440px;
-    margin: 0 auto;
-    padding: 0 20px;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
 }
 
-div.boxes{
-    background-color: $container-bg;
+
+
+
+.box{
     display: flex;
     justify-content: center;
     align-items: center;
-    
-    width: 90%;
-    margin: 0 auto;
-    
-    height: 75%;
-    border-radius: 10px;
-    box-shadow: 2px 5px 16px 1px rgba(0,0,0,0.65);
-    div.box{
-        display: flex;
-        justify-content: center;
-        flex-direction: column;
-        align-items: center;
-        width: 300px;
-        background-color: white;
-        padding: 12px;
-        border-radius: 10px;
-        box-shadow: 2px 5px 16px 1px rgba(0, 0, 0, 0.365);
-        div.image-box{
-            img{
-                width: 250px;
-                border-radius: 10px;
-            }
-        }
-        div.title-box{
-
-            h2{
-                text-align: center;
-                margin: 15px 0;
-                line-height: 30px;
-                font-weight: 600;
-            }
-        }
-        div.content-box{
-            p{
-                text-align: center;
-                margin: 15px 0;
-                line-height: 20px;
-                font-size: 15px;
-                color: rgb(128, 128, 128);
-            }
-        }
+    flex-direction: column;
+    max-width: 300px;
+    background-color: white;
+    padding: 1rem;
+    border-radius: 8px;
+    gap: 1rem;
+    img{
+        max-width: 250px;
+        border-radius: 8px;
     }
+    h2{
+        text-align: center;
+        font-size: 1.3rem;
+        font-weight: 700;
+        max-width: 250px;
+    }
+    p{
+        text-align: center;
+        font-size: 1rem;
+        max-width: 250px;
+        color: rgb(115, 115, 115);
+    }
+}
+
+.background{
+    background-image:url("./../images/body-bg.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -3;
 }
 
 
 // responsive
-@include md{
-    body{
-        background-image: none;
-    }
-
-    div.container{
-        max-width: 100%;
-        height: 100%;
-        padding: 0;
-    }
-
-    div.boxes{
-        width: 100%;
-        height: 100%;
-        padding: 0;
-        div.box{
-            padding: 50px 5px;
-            div.image-box{
-                img{
-                    width: 200px;
-                }
-            }
-            div.title-box{
-    
-                h2{
-                    font-size: 18px;
-                    line-height: 20px;
-                    margin: 8px 0;
-                }
-            }
-            div.content-box{
-                p{
-                    line-height: 16px;
-                    margin: 8px 0;
-                }
-            }
+@include desktop{
+    .box{
+        max-width: 500px;
+        padding: 1.3rem;
+        border-radius: 10px;
+        gap: 1.5rem;
+        img{
+            max-width: 300px;
+            border-radius: 10px;
+        }
+        h2{
+            font-size: 1.5rem;
+            max-width: 300px;
+        }
+        p{
+            font-size: 1.2rem;
+            max-width: 290px;
         }
     }
-
-}
-
-@include lg{
-    
-
-    div.container{
-        padding: 0;
-    }
-
-    div.boxes{
-        width: 60%;
-        margin: 0;
-        div.box{
-            padding: 50px 5px;
-            div.image-box{
-                img{
-                    width: 200px;
-                }
-            }
-            div.title-box{
-    
-                h2{
-                    font-size: 20px;
-                    line-height: 22px;
-                    margin: 8px 0;
-                }
-            }
-            div.content-box{
-                p{
-                    line-height: 18px;
-                    margin: 8px 0;
-                }
-            }
-        }
-    }
-
 }

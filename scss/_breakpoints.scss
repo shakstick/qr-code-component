@@ -1,9 +1,5 @@
 $breakpoints:(
-        "xs":0 ,
-        "sm":576px ,
-        "md":768px ,
-        "lg":992px ,
-        "xl":1200p ,
+	"desktop": 1440px
 	);
 
 	
@@ -11,17 +7,9 @@ $breakpoints:(
 	
 	
 	
-@mixin md(){
+@mixin desktop(){
 	
-	@media(max-width:map-get($breakpoints , "md")){
-		
-		@content;	
-	}
-}	
-		
-@mixin lg(){
-	
-	@media(max-width:map-get($breakpoints , "lg")){
+	@media(min-width:map-get($breakpoints , "desktop")){
 		
 		@content;	
 	}
