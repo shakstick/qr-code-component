@@ -1,6 +1,6 @@
 # Qr-Code-Component
 
-#### __Fully Responsive Landing Page__ with: <br>
+#### __Fully Responsive Card Component__ with: <br>
 +  __SASS__
 +  __Flex__
 ___
